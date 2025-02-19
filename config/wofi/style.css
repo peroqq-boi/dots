@@ -1,0 +1,36 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    font-family: "Fira Code";
+    color: #fff;
+}
+
+#scroll {
+padding: 0.5rem;
+}
+
+#input {
+outline: none;
+box-shadow: none;
+border: 0;
+border-radius: 0;
+font-size: 1.2rem;
+padding: 0.5rem;
+}
+
+#inner-box {
+margin: 0.5rem;
+font-size: 1rem;
+}
+
+#img {
+margin: 10px 10px;
+}
+
+#entry {
+border-radius: 0.5rem;
+}
+
+#entry:selected {
+outline: none;
+}

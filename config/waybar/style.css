@@ -1,0 +1,173 @@
+* {
+    font-family: "MesloLGS NF", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    box-shadow: none;
+    outline: none;
+
+    
+}
+
+@import "../../.cache/wal/colors-waybar.css";
+
+window#waybar {
+    min-height: 0;
+    min-width: 0;
+    background-color: alpha(@background, 0.70);
+}
+
+
+/* Default for all modules */
+#clock,
+#custom-notification,
+#custom-updates,
+#tray,
+#window,
+#workspaces,
+#mpris,
+#pulseaudio,
+#backlight,
+#battery,
+#language,
+#idle_inhibitor,
+#custom-wlogout {
+    min-height: 0;
+    min-width: 0;
+    padding: 0px 12px;
+    margin-right: 3px;
+    color: @color5;
+    background-color: alpha(@background, 0.70);
+    border: solid 2px alpha(@color3, 0.80);
+    margin : 0.3rem;
+    transition: 0.3s ease;
+}
+
+#clock:hover,
+#custom-notification:hover,
+#custom-updates:hover,
+#tray:hover,
+#window:hover,
+#mpris:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#language:hover,
+#idle_inhibitor:hover,
+#custom-wlogout:hover {
+    color: shade(@accent, 1.2);
+    background-color: shade(@accent, 0.2);
+}
+
+/* Remove margin if first or last */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* Don't show window's name if there's not one */
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* Customize each module */
+#clock {
+    color: @color6;
+}
+
+#mpris {
+    color: @color6;
+
+}
+
+#custom-notification {
+
+    margin-right: 5px;
+    padding-right: 16px;
+}
+
+#custom-updates {
+
+}
+
+#pulseaudio {
+    font-family: "MesloLGS Nerd Font";
+}
+
+#idle_inhibitor {
+    font-family: "MesloLGS Nerd Font";
+    margin-right: 5px;
+    padding-right: 16px;
+}
+
+#custom-wlogout {
+    margin-right: 5px;
+    padding-right: 16px;
+}
+
+#tray menu {
+    border-radius: 10px;
+    padding: 8px 6px;
+    background-color: alpha(@background, 0.9);
+}
+
+#language {
+    font-family: "MesloLGS Nerd Font";
+}
+
+tooltip {
+    min-height: 0;
+    min-width: 0;
+    background-color: alpha(@background, 0.9);
+    border-radius: 20px;
+}
+
+tooltip label {
+    color: @accent;
+    padding: 0px;
+}
+
+#workspaces {
+    padding: 2px 4px 2px 4px ;
+    background: none;
+}
+
+#workspaces button:hover {
+    color: @accent;
+    background: alpha(@background, 0.3);
+    border-radius: 0px;
+}
+
+/* Only focused workspace*/
+#workspaces button.active {
+    color:  @color6;
+    background: alpha(@background, 0.6);
+    padding: 0 1.2rem 0 1.2rem;
+    border-radius: 0px;
+}
+
+/* Unfocused workspace WITH opened Apps
+   !!! Border style is valid for ALL buttons,
+   Set seperate border style for every button. */
+#workspaces button {
+    background: @transparent;
+    transition: all 0.3s ease-in-out;
+    color: @color7;
+}
+
+#workspaces button:not(.empty):not(.active) {
+    background: alpha(@background, 0.6);
+    border-radius: 0px;
+}
+
+#window {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}

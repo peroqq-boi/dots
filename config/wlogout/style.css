@@ -1,0 +1,46 @@
+@import '../../.cache/wal/colors-waybar.css';
+
+*{
+  font-family: "JetBrainsMonoNL NF Semibold", Semibold FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  background-image: none;
+  transition: 20ms;
+}
+
+window {
+  background-color: rgba(12, 12, 12, 0.5);
+}
+
+button {
+  color: @color15;
+  font-size: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+
+  border-style: solid;
+  border-radius: 15px;
+  background-color: rgba(12, 12, 12, 0.3);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba (0, 0, 0, 0.19);
+}
+
+button:focus {
+  color: @color6;
+}
+button:active,
+button:hover {
+  background-color: rgba(12, 12, 12, 0.5);
+}
+
+#logout {
+  background-image: image(url("./icons/logout.svg"));
+}
+
+#shutdown {
+  background-image: image(url("./icons/shutdown.svg"));
+}
+
+#reboot {
+  background-image: image(url("./icons/reboot.svg"));
+}

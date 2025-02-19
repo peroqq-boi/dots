@@ -1,0 +1,191 @@
+{
+    "position": "top",
+    "layer": "top",
+    "reload_style_on_change": true,
+    "spacing": 0,
+    "margin-top": 3,
+    "margin-right": 3,
+    "margin-left": 3,
+    "margin-bottom": 0,
+    "fixed-center": true,
+    "modules-left": [
+
+        "mpris",
+
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "custom/notification",
+        "clock",
+        "clock#time",
+        "idle_inhibitor",
+        "custom/wlogout"
+    ],
+    
+    // Modules configuration
+    "backlight": {
+        "scroll-step": 10.0,
+        "tooltip": false,
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "states": {
+            "good": 75,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+
+   "clock": {
+		"format": "  {:%A - %d/%m/%Y}",
+        "on-click": "planify",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+	
+
+	"clock#time": {
+        "interval": 1,
+		"format": "  {:%T}",
+        "tooltip": false
+	},
+
+    "mpris": {
+        "format": "♫ 󰐊 {dynamic}",
+        "format-paused": "♫ 󰏤 {dynamic}",
+        "max-length": 80
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}  {format_source}",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
+        "format-bluetooth-muted": "󰖁 {icon}  {format_source}",
+        "format-muted": "󰖁  {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol -t 3"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "",
+            "none": "",
+            "dnd-notification": "",
+            "dnd-none": "",
+            "inhibited-notification": "",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/updates": {
+        "format": "{}",
+        "interval": 3600,
+        "on-click": "kitty --class update arch-update",
+        "exec": "~/.config/waybar/scripts/checkupdates.sh",
+        "return-type": "json"
+    },
+    "custom/wlogout": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip-format-activated": "The computer is prevented from going to sleep",
+        "tooltip-format-deactivated": "The computer will go to sleep if the user is idle"
+    },
+    "hyprland/workspaces": {
+        "all-outputs": false,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": [ 1,2,3,4,5 ]
+        }
+    },
+        "on-scroll-up": "hyprctl dispatch workspace r+1",
+        "on-scroll-down": "hyprctl dispatch workspace r-1",
+    },
+    "hyprland/window": {
+        "max-length": 25,
+        "separate-outputs": true,
+        "format": "{title}"
+    }
+}

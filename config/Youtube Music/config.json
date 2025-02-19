@@ -1,0 +1,101 @@
+{
+	"window-size": {
+		"width": 1668,
+		"height": 987
+	},
+	"window-maximized": false,
+	"window-position": {
+		"x": 6,
+		"y": 57
+	},
+	"url": "https://music.youtube.com/watch?v=yArjtdk_QuA&list=RDAMVMm-BOnqtmMnQ&index=0",
+	"options": {
+		"tray": false,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": true,
+		"hideMenuWarned": true,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": [
+			"/home/user721/.config/youwal/youwal.css"
+		]
+	},
+	"plugins": {
+		"notifications": {},
+		"video-toggle": {
+			"mode": "custom",
+			"enabled": true,
+			"hideVideo": false,
+			"forceHide": false,
+			"align": "left"
+		},
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"discord": {
+			"listenAlong": true,
+			"enabled": true
+		},
+		"quality-changer": {
+			"enabled": true
+		},
+		"lyrics-genius": {
+			"enabled": true
+		},
+		"disable-autoplay": {
+			"enabled": false
+		},
+		"downloader": {
+			"enabled": true,
+			"downloadFolder": "/home/user721/Downloads",
+			"downloadOnFinish": {
+				"enabled": false,
+				"seconds": 20,
+				"percent": 10,
+				"mode": "seconds",
+				"folder": "/home/user721/Downloads"
+			},
+			"selectedPreset": "mp3 (256kbps)",
+			"customPresetSetting": {
+				"extension": "mp3",
+				"ffmpegArgs": [
+					"-b:a",
+					"256k"
+				]
+			},
+			"skipExisting": false
+		},
+		"bypass-age-restrictions": {
+			"enabled": true
+		},
+		"album-color-theme": {
+			"enabled": false
+		},
+		"ambient-mode": {
+			"enabled": false
+		},
+		"no-google-login": {
+			"enabled": true
+		},
+		"in-app-menu": {
+			"enabled": true
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.7.2"
+		}
+	}
+}
